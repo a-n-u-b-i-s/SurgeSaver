@@ -120,10 +120,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Anubis Watal - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
-Tess Danehy - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
-Lukas Houpt - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
-Neil Kothari - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
+- Anubis Watal - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
+- Tess Danehy - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
+- Lukas Houpt - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
+- Neil Kothari - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
 
 Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n-u-b-i-s/SurgeSaver)
 
