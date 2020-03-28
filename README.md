@@ -17,7 +17,6 @@
     <br />
     <a href="https://github.com/a-n-u-b-i-s/SurgeSaver"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
     <a href="https://surgesaver.com">View Demo</a>
     ·
     <a href="https://github.com/a-n-u-b-i-s/SurgeSaver/issues">Report Bug</a>
@@ -120,10 +119,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-- Anubis Watal - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
-- Tess Danehy - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
-- Lukas Houpt - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
-- Neil Kothari - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)
+Anubis Watal - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
+Tess Danehy - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
+Lukas Houpt - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
+Neil Kothari - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
 
 Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n-u-b-i-s/SurgeSaver)
 
