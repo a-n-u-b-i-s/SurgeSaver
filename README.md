@@ -95,7 +95,7 @@ npm install
 ![Analytics Screen Shot][analytics-screenshot]
 ![Text Screen Shot][text-screenshot]
 
-SurgeSaver tracks live and predictive Locational Marginal Pricing (LMP) across over 20 energy/power utilities in the Midwest and Mid Atlantic. We send text-alerts to users when price gouging is likely to occur within the next 24 hours, giving them the necessary information to make informed decisions regarding their power usage. In addition, the application compiles and displays informative visualizations of demand trends.
+SurgeSaver tracks live and predictive Locational Marginal Pricing (LMP) across over 20 energy/power utilities in the Midwest and Mid Atlantic in the PJM transmission zone. We send text-alerts to users when price gouging is likely to occur within the next 24 hours, giving them the necessary information to make informed decisions regarding their power usage. In addition, the application compiles and displays informative visualizations of demand trends.
 
 
 <!-- ROADMAP -->
