@@ -5,7 +5,7 @@ var V = {
 			title: "How do I get started?",
 			icon: "fa-map-signs",
 			content:
-				"Enter your Zipcode to see how much money you could be saving today.",
+				"Enter your Zipcode to see your local daily energy costs and start saving today.",
 			click: function() {
 				document.getElementById("zI").focus();
 			}
@@ -15,7 +15,7 @@ var V = {
 			title: "How does it help?",
 			icon: "fa-globe-americas",
 			content:
-				"SurgeSaver saves the environment by reducing the strain on the power grid.",
+				"SurgeSaver saves the environment by reducing the use of peaker plants.",
 			click: function() {
 				V.currentPage = "FAQ";
 			}
@@ -24,7 +24,7 @@ var V = {
 			title: "How does it work?",
 			icon: "fa-bolt",
 			content:
-				"SurgeSaver will notify you during peak hours, notifying you to recude your consumption.",
+				"SurgeSaver will notify you during peak hours so you can modify your consumption schedule.",
 			click: function() {
 				V.currentPage = "About";
 			}

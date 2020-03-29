@@ -703,4 +703,28 @@ input:hover:focus {
   font-family: "Nunito-Bold", "Nunito", sans-serif !important;
 }
 
+.aboutContent {
+  max-width: 70vw;
+  height: 80vh;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 1024px) {
+  .aboutContent {
+    max-width: 90vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutContent {
+    width: 100%;
+    height: auto;
+    overflow-y: none;
+  }
+}
+.aboutContent p {
+  font-size: 1.1em;
+}
+.aboutContent ul li {
+  font-size: 1.1em;
+}
+
 /*# sourceMappingURL=index.css.map */

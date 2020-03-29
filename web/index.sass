@@ -488,3 +488,19 @@ input
     border-top: 1px solid rgba(200, 200, 200) !important
     p
         font-family: $bold !important
+
+.aboutContent
+    max-width: 70vw
+    height: 80vh
+    overflow-y: scroll
+    @media screen and (max-width: $lg)
+        max-width: 90vw
+    @media screen and (max-width: $md)
+        width: 100%
+        height: auto
+        overflow-y: none
+    p
+        font-size: 1.1em
+    ul
+        li
+            font-size: 1.1em

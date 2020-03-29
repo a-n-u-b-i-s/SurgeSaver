@@ -108,7 +108,7 @@
 						v-if="mobileMenuOpen"
 						@click="toggleMobileMenu()"
 					></i>
-					<div class="logoContainer">
+					<div class="logoContainer" @click='changePage("Home")'>
 						<img class="logo" src="logo.png" />
 					</div>
 					<i class="logoSideMenu"></i>
@@ -236,12 +236,114 @@
 						<h1>About</h1>
 					</div>
 					<div class="underTitle onlyDesktop"></div>
+					<div class="aboutContent">
+						<h3>What are Peak Hours?</h3>
+						<p>
+							Consumer demand for electricity varies greatly throughout the day,
+							and utilities respond by price gouging during peak hours to
+							disincentivize use. “Regular” peak hours occur at predictable
+							times and follow daily, weekly, and seasonal trends, while
+							“critical” peak hours occur during rare events such as summer heat
+							waves. When price gouging is unsuccessful at lowering demand,
+							utilities contribute extra capacity with “peaker” plants: small
+							and inefficient natural gas plants that generate among the
+							nation’s worst pollution. In especially rare peak hours, peaker
+							plants alone cannot meet demand and consumers are faced with
+							brownouts.
+						</p>
+						<p>
+							Most consumers aren’t aware of the hours when they should reduce
+							consumption and end up paying over 10x as much per kWh to run
+							everyday appliances during peak hours. With our application, users
+							will be notified when surge pricing is likely to occur in order to
+							save money and save the planet.
+						</p>
+						<h3>How Does it Work?</h3>
+						<p>
+							SurgeSaver tracks live and Day-Ahead Locational Marginal Pricing
+							(LMP) across over 20 utilities in the Midwest and Mid Atlantic
+							that fall within the PJM transmission zone. We establish a price
+							threshold for delivering notifications, and alert users when price
+							gouging is likely to occur within the next 24 hours. In our
+							Analytics page, we display informative visualizations of price
+							trends.
+						</p>
+						<p>A dynamic response to price gouging could include:</p>
+						<ul>
+							<li>
+								Advancing and/or delaying the use of heavy appliances such as
+								water heaters and air conditioners, many of which are
+								programmable from a mobile phone or other remote source.
+							</li>
+							<li>
+								Drawing electricity usage from a battery unit during peak hours.
+							</li>
+							<li>
+								Deploying battery capacity onto the grid during peak hours to
+								sell unused electricity at high rates.
+							</li>
+						</ul>
+						<h3>How does it help?</h3>
+						<p>
+							Smoothing electricity consumption provides many financial and
+							environmental benefits. As long as aggregate electricity demand
+							follows a non-uniform distribution, savings can be accrued by
+							navigating consumption towards off-peak hours where electricity is
+							less expensive. Doing so allows utilities to reduce usage of dirty
+							peaker plants and maintain cleaner air. This also eliminates wear
+							and tear on the electrical grid, minimizing maintenance and
+							voltage regulation costs, thus pushing your utility bill even
+							lower!
+						</p>
+						<p>
+							Often regarded as the primary pitfall of renewable energy is its
+							fluctuating supply that can cause frequent and unpredictable power
+							outages if representing a large proportion of a grid’s energy
+							portfolio. This is because renewable sources are dependent on
+							specific weather conditions and it’s generation plummets on cloudy
+							and non-windy days. In order to feasibly increase the supply of
+							renewables, consumers must match their demand with its inherently
+							variable supply in a dynamic manner such as responsive consumption
+							and battery storage. Many states across the nation have imposed
+							aggressive renewable energy goals. Sign up now to do your part in
+							making renewable energy feasible!
+						</p>
+					</div>
 				</div>
 				<div class="surgePageContent" id="FAQ" v-if='currentPage==="FAQ"'>
 					<div class="title">
 						<h1>FAQ</h1>
 					</div>
 					<div class="underTitle onlyDesktop"></div>
+					<div class="aboutContent">
+						<h3>How does the text alert service work?</h3>
+						<p>After you enter your zip code, you will be given the opportunity to enter your number to receive text alerts. We partner
+						with Twilio to send out these alerts whenever we detect peak energy usage. You will receive an SMS text 3 hours in
+						advance in order to provide adequate time to adjust your consumption schedule.</p>
+						<h3>How do we determine peak-hours?</h3>
+						<p>Based on historical and forecasted data, we determine exactly when the highest prices would occur during the day. We
+						then notify you via text alerts at least three hours in advance so that you can make the necessary adjustments.</p>
+						<h3>What do I do when I get a notification?</h3>
+						<p>As soon as you get a notification, you should begin to modify your energy use. Consider delaying when you use heating or
+						cooling systems until after the peak period has ended.</p>
+						<h3>What is price gouging?</h3>
+						<p>Price Gouging occurs when a seller increases the prices of goods or services to a level that is much higher than what
+						would be considered reasonable or fair. In this context, many energy suppliers will spike their prices in response to a
+						sudden demand shock.</p>
+						<h3>How often do you update your forecasts?</h3>
+						<p>We use real-time data to update our models and analytics. If there is a change in your predicted peak-hours, you will
+						see the change reflected almost immediately.</p>
+						<h3>What is the difference between the two graphs on the analytics page?</h3>
+						<p>The first graph provides a forecasted model for peak pricing today whereas the second graph shows you the historical
+						average pricing for a month of your choosing, allowing you to compare today’s pricing to historical trends.</p>
+						<h3>What is LMP?</h3>
+						<p>Locational Marginal Pricing (LMP) reflects the value of electricity at different locations, and is the price at which
+						electricity is traded in the wholesale market. LMP is relevant for large consumers that purchase electricity wholesale
+						as well as for residents and businesses purchasing directly from their local utility. This is because utility rates,
+						which comprise the retail market, are derived from the underlying wholesale market activity. LMP is calculated as the
+						price of an increment of electricity after accounting for the congestion and transmission losses of delivering that
+						electricity.</p>
+					</div>
 				</div>
 
 				<div class="footer">
