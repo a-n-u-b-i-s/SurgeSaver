@@ -27,9 +27,16 @@
 			type="text/css"
 			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
 		/>
-		<link href="index.css" rel="stylesheet" />
+		<link
+			href="https://s3.amazonaws.com/surgesaver.com/index.css"
+			rel="stylesheet"
+		/>
 
-		<link rel="icon" type="image/png" href="icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://s3.amazonaws.com/surgesaver.com/icon.png"
+		/>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -39,7 +46,10 @@
 		<div id="surge">
 			<div class="navigationContainer">
 				<div class="logoContainer">
-					<img class="logo" src="logo.png" />
+					<img
+						class="logo"
+						src="https://s3.amazonaws.com/surgesaver.com/logo.png"
+					/>
 				</div>
 				<hr class="underLogo" />
 				<div class="navigation">
@@ -109,7 +119,10 @@
 						@click="toggleMobileMenu()"
 					></i>
 					<div class="logoContainer" @click='changePage("Home")'>
-						<img class="logo" src="logo.png" />
+						<img
+							class="logo"
+							src="https://s3.amazonaws.com/surgesaver.com/logo.png"
+						/>
 					</div>
 					<i class="logoSideMenu"></i>
 				</div>
@@ -395,6 +408,6 @@
 			</div>
 		</div>
 	</body>
-	<script src="graph.js"></script>
-	<script src="index.js"></script>
+	<script src="https://s3.amazonaws.com/surgesaver.com/graph.js"></script>
+	<script src="https://s3.amazonaws.com/surgesaver.com/index.js"></script>
 </html>

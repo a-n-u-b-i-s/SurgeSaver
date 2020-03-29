@@ -747,4 +747,15 @@ input:hover:focus {
   font-size: 1.1em;
 }
 
+#Analytics {
+  height: 90vh;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 768px) {
+  #Analytics {
+    height: auto;
+    overflow-y: none;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
