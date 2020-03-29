@@ -149,4 +149,4 @@ Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n
 [license-url]: https://github.com/a-n-u-b-i-s/SurgeSaver/blob/master/LICENSE.txt
 [product-screenshot]: images/home.png
 [analytics-screenshot]: images/analytics.png
-[text-screenshot]: images/TextAlert.png
+[text-screenshot]: images/TextAlert.jpg
