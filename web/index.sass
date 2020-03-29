@@ -196,6 +196,7 @@ $xl: 1280px
     min-width: 83%
     background: $offWhite
     @media screen and (max-width: $md)
+        justify-content: flex-start
         width: 100%
 
 .surgePageContent
@@ -459,3 +460,31 @@ input
     margin-top: 25px
     &:hover
         +float()
+
+.logoSideMenu
+    margin: 0px 8%
+    font-size: 1.4em
+    color: $white
+    width: 0px
+
+.mNavContainer
+    display: flex
+    flex-direction: column
+    width: 100%
+    .mNavItem
+        color: rgba(0, 0, 0, 75)
+        background: white
+        border-bottom: 1px solid rgba(240, 240, 240)
+        padding: 0px 8%
+        p
+            font-size: 1.1em
+            font-family: $semi-bold
+        i
+            font-size: 1.1em
+            margin-right: 10px
+.mselected
+    background: $offWhite !important
+    border-bottom: 1px solid rgba(200, 200, 200) !important
+    border-top: 1px solid rgba(200, 200, 200) !important
+    p
+        font-family: $bold !important

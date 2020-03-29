@@ -2,14 +2,15 @@ var V = {
 	currentPage: "Home",
 	homeInfoSections: [
 		{
-			title: "How does it work?",
-			icon: "fa-bolt",
+			title: "How do I get started?",
+			icon: "fa-map-signs",
 			content:
-				"SurgeSaver will notify you during peak hours, notifying you to recude your consumption.",
+				"Enter your Zipcode to see how much money you could be saving today.",
 			click: function() {
-				V.currentPage = "About";
+				document.getElementById("zI").focus();
 			}
 		},
+
 		{
 			title: "How does it help?",
 			icon: "fa-globe-americas",
@@ -20,12 +21,12 @@ var V = {
 			}
 		},
 		{
-			title: "How do I get started?",
-			icon: "fa-map-signs",
+			title: "How does it work?",
+			icon: "fa-bolt",
 			content:
-				"Enter your Zipcode to see how much money you could be saving today.",
+				"SurgeSaver will notify you during peak hours, notifying you to recude your consumption.",
 			click: function() {
-				document.getElementById("zI").focus();
+				V.currentPage = "About";
 			}
 		}
 	],
@@ -35,7 +36,8 @@ var V = {
 	month: new Date().toLocaleString("default", { month: "long" }),
 	phoneNumber: "",
 	phoneNumberInput: "",
-	validPhone: true
+	validPhone: true,
+	mobileMenuOpen: false
 };
 
 var fin = new Vue({
@@ -63,17 +65,20 @@ var fin = new Vue({
 	methods: {
 		changePage: function(page) {
 			V.currentPage = page;
+			V.mobileMenuOpen = false;
 			dg();
 			if (page === "Analytics") {
 				cg();
 			}
 		},
 		setZipcode: function() {
+			V.analyticsZipCode = "";
 			var code = V.analyticsZipCodeInput;
 			if (code.length === 5 && /^\d+$/.test(code)) {
 				V.analyticsZipCode = code;
 			} else {
 				V.validZipCodeInput = false;
+				V.analyticsZipCode = "";
 				setTimeout(function() {
 					V.validZipCodeInput = true;
 				}, 800);
@@ -116,6 +121,9 @@ var fin = new Vue({
 					V.validPhone = true;
 				}, 800);
 			}
+		},
+		toggleMobileMenu: function() {
+			V.mobileMenuOpen = !V.mobileMenuOpen;
 		}
 	}
 });

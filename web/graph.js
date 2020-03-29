@@ -178,6 +178,7 @@ function updateGraphZ(analyticsZipCode) {
 			} else if (V.analyticsZipCode) {
 				V.currentPage = "Home";
 				V.validZipCodeInput = false;
+				V.analyticsZipCode = "";
 				setTimeout(function() {
 					V.validZipCodeInput = true;
 				}, 800);
@@ -205,6 +206,7 @@ function updateGraphM(analyticsZipCode, month) {
 			} else if (V.analyticsZipCode) {
 				V.currentPage = "Home";
 				V.validZipCodeInput = false;
+				V.analyticsZipCode = "";
 				setTimeout(function() {
 					V.validZipCodeInput = true;
 				}, 800);

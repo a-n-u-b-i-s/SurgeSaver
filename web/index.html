@@ -98,8 +98,50 @@
 
 			<div class="surgeInfoContainer">
 				<div class="onlyMobile mLogo">
+					<i
+						class="logoSideMenu fa fa-bars"
+						v-if="!mobileMenuOpen"
+						@click="toggleMobileMenu()"
+					></i>
+					<i
+						class="logoSideMenu fa fa-times"
+						v-if="mobileMenuOpen"
+						@click="toggleMobileMenu()"
+					></i>
 					<div class="logoContainer">
 						<img class="logo" src="logo.png" />
+					</div>
+					<i class="logoSideMenu"></i>
+				</div>
+				<div class="onlyMobile mNavContainer" v-if="mobileMenuOpen">
+					<div
+						class="mNavItem"
+						:class='{ mselected: currentPage==="Home" }'
+						@click='changePage("Home")'
+					>
+						<p><i class="fa fa-home"></i> Home</p>
+					</div>
+					<div
+						class="mNavItem"
+						v-if="analyticsZipCode"
+						:class='{ mselected: currentPage==="Analytics" }'
+						@click='changePage("Analytics")'
+					>
+						<p><i class="fa fa-chart-line"></i> Analytics</p>
+					</div>
+					<div
+						class="mNavItem"
+						:class='{ mselected: currentPage==="About" }'
+						@click='changePage("About")'
+					>
+						<p><i class="fa fa-atom"></i> About</p>
+					</div>
+					<div
+						class="mNavItem"
+						:class='{ mselected: currentPage==="FAQ" }'
+						@click='changePage("FAQ")'
+					>
+						<p><i class="fa fa-life-ring"></i> FAQ</p>
 					</div>
 				</div>
 				<div class="surgePageContent" id="Home" v-if='currentPage==="Home"'>

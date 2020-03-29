@@ -159,6 +159,7 @@
 }
 @media screen and (max-width: 768px) {
   .surgeInfoContainer {
+    justify-content: flex-start;
     width: 100%;
   }
 }
@@ -664,6 +665,42 @@ input:hover:focus {
   -ms-transform: scale(1.02, 1.02);
   -webkit-transform: scale(1.02, 1.02);
   transform: scale(1.02, 1.02);
+}
+
+.logoSideMenu {
+  margin: 0px 8%;
+  font-size: 1.4em;
+  color: #ffffff;
+  width: 0px;
+}
+
+.mNavContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.mNavContainer .mNavItem {
+  color: black;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0px 8%;
+}
+.mNavContainer .mNavItem p {
+  font-size: 1.1em;
+  font-family: "Nunito-SemiBold", "Nunito", sans-serif;
+}
+.mNavContainer .mNavItem i {
+  font-size: 1.1em;
+  margin-right: 10px;
+}
+
+.mselected {
+  background: #f7f9fc !important;
+  border-bottom: 1px solid #c8c8c8 !important;
+  border-top: 1px solid #c8c8c8 !important;
+}
+.mselected p {
+  font-family: "Nunito-Bold", "Nunito", sans-serif !important;
 }
 
 /*# sourceMappingURL=index.css.map */
