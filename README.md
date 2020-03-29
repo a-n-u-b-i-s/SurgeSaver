@@ -112,7 +112,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Anubis Watal - [LinkedIn](https://twitter.com/twitter_handle) - [email](mailto:aw3852@nyu.edu)<br />
+Anubis Watal - [LinkedIn](https://www.linkedin.com/in/anubis-w-ab4948148/) - [email](mailto:aw3852@nyu.edu)<br />
 Tessa Danehy - [LinkedIn](https://www.linkedin.com/in/tessa-danehy-314894153/) - [email](mailto:tld9kg@virginia.edu)<br />
 Lukas Houpt - [LinkedIn](https://www.linkedin.com/in/lukas-houpt-a185b1174/) - [email](mailto:lh2xs@virginia.edu)<br />
 Neil Kothari - [LinkedIn](https://www.linkedin.com/in/neilkothari1/) - [email](mailto:nak5c@virginia.edu)<br />
