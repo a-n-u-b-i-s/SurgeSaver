@@ -32,7 +32,7 @@
 		<link rel="icon" type="image/png" href="icon.png" />
 
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 	</head>
 
 	<body>
@@ -57,6 +57,7 @@
 						<div v-if='currentPage==="Home"' class="navigationHighlight"></div>
 					</div>
 					<div
+						v-if="analyticsZipCode"
 						class="navigationItem"
 						:class='{ selected: currentPage==="Analytics" }'
 						@click='changePage("Analytics")'
@@ -96,46 +97,55 @@
 			</div>
 
 			<div class="surgeInfoContainer">
+				<div class="onlyMobile mLogo">
+					<div class="logoContainer">
+						<img class="logo" src="logo.png" />
+					</div>
+				</div>
 				<div class="surgePageContent" id="Home" v-if='currentPage==="Home"'>
-					<h1>Save Money. Save the Planet</h1>
+					<div class="title">
+						<h1>
+							Save Money. <br class="onlyMobile" />
+							Save the Planet.
+						</h1>
+					</div>
+					<div class="underTitle onlyDesktop"></div>
 					<div class="infoContainer">
-						<div class="section">
-							<div class="floater l">
-								<h3 class="sectionHeader">How does it work?</h3>
+						<div class="section" v-for="hs in homeInfoSections">
+							<div class="floater" @click="hs.click()">
+								<h3 class="sectionHeader">{{hs.title}}</h3>
 								<div class="regIconContainer">
-									<i class="bigIcon fa fa-bolt"></i>
+									<i class="bigIcon fa" :class="hs.icon"></i>
 								</div>
-								<p>
-									SurgeSaver will notify you during peak hours, notifying you to
-									recude your consumption.
-								</p>
-							</div>
-						</div>
-						<div class="section">
-							<div class="floater m">
-								<h3 class="sectionHeader">How does it help?</h3>
-								<div class="regIconContainer">
-									<i class="bigIcon fa fa-globe-americas"></i>
-								</div>
-								<p></p>
-							</div>
-						</div>
-						<div class="section">
-							<div class="floater r">
-								<h3 class="sectionHeader">How do I get started?</h3>
-								<div class="regIconContainer">
-									<i class="bigIcon fa fa-map-signs"></i>
-								</div>
-								<p>Enter your Zipcode to see how much you can be saving.</p>
+								<p>{{hs.content}}</p>
 							</div>
 						</div>
 					</div>
-					<div>
-						<p>Zipcode: <input /></p>
-						<h4>
+					<div class="surgeInputs">
+						<p class="inputTitle">Zipcode</p>
+						<input
+							v-model="analyticsZipCodeInput"
+							@keyup.enter="setZipcode()"
+							:class="{ invalid: !validZipCodeInput }"
+							id="zI"
+						/>
+						<a class="btn" @click="goToAnalytics()" v-if="analyticsZipCode"
+							>Go To Analytics</a
+						>
+						<h4 class="inputTexts" v-if="analyticsZipCode">
 							Where should we send Peak Hour Notifications?
 						</h4>
-						<p>Text / SMS: <input /></p>
+						<p class="inputTitle" v-if="analyticsZipCode">Text / SMS</p>
+						<input
+							v-if="analyticsZipCode"
+							v-model="phoneNumberInput"
+							@keyup.enter="setPhoneNumber()"
+							:class="{ invalid: !validPhone }"
+							id="pN"
+						/>
+						<a class="btn" @click="setPhoneNumber()" v-if="analyticsZipCode"
+							>Get Notified</a
+						>
 					</div>
 				</div>
 				<div
@@ -143,26 +153,71 @@
 					id="Analytics"
 					v-if='currentPage==="Analytics"'
 				>
-					<h1>Analytics</h1>
+					<div class="title">
+						<h1>Analytics</h1>
+					</div>
+					<div class="underTitle onlyDesktop"></div>
+					<div class="graphContainer">
+						<h3 class="chartTitle">Forcasted Hourly LMPs</h3>
+						<div class="floater onlyDesktop" id="next24ChartContainer"></div>
+						<div class="floater onlyMobile" id="next24ChartContainerM"></div>
+					</div>
+					<div class="graphContainer">
+						<h3 class="chartTitle">
+							Average Hourly LMPs for
+							<div class="dropdown">
+								<button id="monthPicker" class="chartInput">
+									{{month}}
+								</button>
+								<div class="dropContent">
+									<a @click="V.month = 'January'">January</a>
+									<a @click="V.month = 'February'">February</a>
+									<a @click="V.month = 'March'">March</a>
+									<a @click="V.month = 'April'">April</a>
+									<a @click="V.month = 'May'">May</a>
+									<a @click="V.month = 'June'">June</a>
+									<a @click="V.month = 'July'">July</a>
+									<a @click="V.month = 'August'">August</a>
+									<a @click="V.month = 'September'">September</a>
+									<a @click="V.month = 'October'">October</a>
+									<a @click="V.month = 'November'">November</a>
+									<a @click="V.month = 'December'">December</a>
+								</div>
+							</div>
+						</h3>
+						<div class="floater onlyDesktop" id="month24ChartContainer"></div>
+						<div class="floater onlyMobile" id="month24ChartContainerM"></div>
+					</div>
 				</div>
 				<div class="surgePageContent" id="About" v-if='currentPage==="About"'>
-					<h1>About</h1>
+					<div class="title">
+						<h1>About</h1>
+					</div>
+					<div class="underTitle onlyDesktop"></div>
 				</div>
 				<div class="surgePageContent" id="FAQ" v-if='currentPage==="FAQ"'>
-					<h1>FAQ</h1>
-				</div>
-				<div class="footer">
-					<div>
-						<p class="listed">Mail: <span>support@surgesaver.com</span></p>
-						<p class="listed">Twitter: <span>@surgesaver</span></p>
-						<p class="listed">Instagram: <span>@surgesaver</span></p>
+					<div class="title">
+						<h1>FAQ</h1>
 					</div>
-					<div>
-						<p>&copy; <span>2020 SurgeSaver</span></p>
+					<div class="underTitle onlyDesktop"></div>
+				</div>
+
+				<div class="footer">
+					<div class="underTitle onlyDesktop"></div>
+					<div class="foot">
+						<div>
+							<p class="listed">Mail: <span>support@surgesaver.com</span></p>
+							<p class="listed">Twitter: <span>@surgesaver</span></p>
+							<p class="listed">Instagram: <span>@surgesaver</span></p>
+						</div>
+						<div>
+							<p>&copy; <span>2020 SurgeSaver</span></p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script src="graph.js"></script>
 	<script src="index.js"></script>
 </html>

@@ -1,23 +1,126 @@
 var V = {
-	currentPage: "Home"
+	currentPage: "Home",
+	homeInfoSections: [
+		{
+			title: "How does it work?",
+			icon: "fa-bolt",
+			content:
+				"SurgeSaver will notify you during peak hours, notifying you to recude your consumption.",
+			click: function() {
+				V.currentPage = "About";
+			}
+		},
+		{
+			title: "How does it help?",
+			icon: "fa-globe-americas",
+			content:
+				"SurgeSaver saves the environment by reducing the strain on the power grid.",
+			click: function() {
+				V.currentPage = "FAQ";
+			}
+		},
+		{
+			title: "How do I get started?",
+			icon: "fa-map-signs",
+			content:
+				"Enter your Zipcode to see how much money you could be saving today.",
+			click: function() {
+				document.getElementById("zI").focus();
+			}
+		}
+	],
+	analyticsZipCode: "",
+	analyticsZipCodeInput: "",
+	validZipCodeInput: true,
+	month: new Date().toLocaleString("default", { month: "long" }),
+	phoneNumber: "",
+	phoneNumberInput: "",
+	validPhone: true
 };
-
-// if (document.cookie.includes("prbns=")) {}
 
 var fin = new Vue({
 	el: "#surge",
 	data: V,
 	mounted() {
-		V.currentBank = V.homeBankNames[0];
-		V.bankDataSource = V.banks.filter(x => V.homeBankNames.includes(x.name));
+		updateGraphZ(V.analyticsZipCode);
+		updateGraphM(V.analyticsZipCode, V.month);
+	},
+	updated() {
+		if (V.currentPage === "Analytics") {
+			updateGraphZ(V.analyticsZipCode);
+			updateGraphM(V.analyticsZipCode, V.month);
+		}
+	},
+	watch: {
+		analyticsZipCode: function(val) {
+			updateGraphZ(val);
+			updateGraphM(val, V.month);
+		},
+		month: function(val) {
+			updateGraphM(V.analyticsZipCode, val);
+		}
 	},
 	methods: {
 		changePage: function(page) {
 			V.currentPage = page;
+			dg();
+			if (page === "Analytics") {
+				cg();
+			}
+		},
+		setZipcode: function() {
+			var code = V.analyticsZipCodeInput;
+			if (code.length === 5 && /^\d+$/.test(code)) {
+				V.analyticsZipCode = code;
+			} else {
+				V.validZipCodeInput = false;
+				setTimeout(function() {
+					V.validZipCodeInput = true;
+				}, 800);
+			}
+		},
+		goToAnalytics: function() {
+			this.changePage("Analytics");
+			updateGraphZ(V.analyticsZipCode);
+			updateGraphM(V.analyticsZipCode, V.month);
+		},
+		setPhoneNumber: function() {
+			var number = V.phoneNumberInput;
+			if (/^\+?(1?)\D?(\d{3})\D?(\d{3})\D?(\d{4})$/.test(number)) {
+				number = number.replace(
+					/^\+?(1?)\D?(\d{3})\D?(\d{3})\D?(\d{4})$/,
+					"+1$2$3$4"
+				);
+				V.phoneNumber = number;
+				window
+					.fetch("https://api.surgesaver.com/surgesaver-api", {
+						method: "POST",
+						body: JSON.stringify({
+							zipcode: V.analyticsZipCode,
+							phoneNumber: V.phoneNumber,
+							date: new Date().toISOString()
+						}),
+						headers: {
+							"Content-Type": "application/json"
+						}
+					})
+					.then(res => res.json())
+					.then(function(x) {
+						V.currentPage = "Analytics";
+						updateGraphZ(V.analyticsZipCode);
+						updateGraphM(V.analyticsZipCode, V.month);
+					});
+			} else {
+				V.validPhone = false;
+				setTimeout(function() {
+					V.validPhone = true;
+				}, 800);
+			}
 		}
 	}
 });
 
 window.onload = function() {
 	// Onload Functions
+	cg();
 };
