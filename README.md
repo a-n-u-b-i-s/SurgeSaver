@@ -49,7 +49,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Demand for electricity varies greatly throughout the day, and companies have responded by charging more for power during certain hours to disincentivize use. “Peaker plants” are inefficient power plants only used in these hours of peak consumption, and are the source of some of the country’s worst pollution. Most people aren’t aware of the hours when they should reduce consumption, and end up paying up to 5x as much per kWh for things like running their AC mid-day. With our application, users will be notified when surge pricing is likely to occur, and will be able to reduce energy use to both save money and help the environment by avoiding "peaker plants". 
+Demand for electricity varies greatly throughout the day, and companies have responded by charging more for power during certain hours to disincentivize use. “Peaker plants” are inefficient power plants only used in these hours of peak consumption, and are the source of some of the country’s worst pollution. Most people aren’t aware of the hours when they should reduce consumption, and end up paying up to 5x as much per kWh for things like running their AC mid-day. With our application, users will be notified when surge pricing is likely to occur, and will be able to reduce energy use to both save money and help the environment by avoiding "peaker plants".
 
 ### Built With
 
@@ -92,10 +92,10 @@ npm install
 <!-- USAGE EXAMPLES -->
 
 ## Usage
+[analytics-screenshot]
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+SurgeSaver tracks live and predictive Locational Marginal Pricing (LMP) across over 20 energy/power utilities in the Midwest and Mid Atlantic. We alert users when price gouging is likely to occur within the next 24 hours, giving them the necessary information to make informed decisions regarding their power usage. addition, the application compiles and displays informative visualizations of demand trends.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 
@@ -132,11 +132,6 @@ Neil Kothari - [LinkedIn](https://www.linkedin.com/in/neilkothari1/) - [email](m
 
 Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n-u-b-i-s/SurgeSaver)
 
-<!-- ACKNOWLEDGEMENTS -->
-
-## Acknowledgements
-
-- []()
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -151,4 +146,5 @@ Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n
 [issues-url]: https://github.com/a-n-u-b-i-s/SurgeSaver/issues
 [license-shield]: https://img.shields.io/github/license/a-n-u-b-i-s/SurgeSaver.svg?style=flat-square
 [license-url]: https://github.com/a-n-u-b-i-s/SurgeSaver/blob/master/LICENSE.txt
-[product-screenshot]: images/analytics.png
+[product-screenshot]: images/home.png
+[analytics-screenshot]: images/analytics.png
