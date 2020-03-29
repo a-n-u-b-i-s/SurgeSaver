@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/a-n-u-b-i-s/SurgeSaver">
-    <img src="images/SurgeSaver (2)-1.png" width="500" height="150">	
+    <img src="images/SurgeSaver (2)-1.png" width="300" height="90">	
   </a>
 
   <h3 align="center">SurgeSaver</h3>
@@ -67,36 +67,24 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Please install the following tools to contribute.
 
 - npm
+- sass
 
 ```sh
-npm install npm@latest -g
-```
-
-### Installation
-
-1. Clone the repo
-
-```sh
-git clone https://github.com/a-n-u-b-i-s/SurgeSaver.git
-```
-
-2. Install NPM packages
-
-```sh
-npm install
+brew install node
+brew install sass/sass/sass
 ```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
+
 ![Analytics Screen Shot][analytics-screenshot]
 ![Text Screen Shot][text-screenshot]
 
 SurgeSaver tracks live and predictive Locational Marginal Pricing (LMP) across over 20 energy/power utilities in the Midwest and Mid Atlantic. We send text-alerts to users when price gouging is likely to occur within the next 24 hours, giving them the necessary information to make informed decisions regarding their power usage. In addition, the application compiles and displays informative visualizations of demand trends.
-
 
 <!-- ROADMAP -->
 
@@ -132,7 +120,6 @@ Lukas Houpt - [LinkedIn](https://www.linkedin.com/in/lukas-houpt-a185b1174/) - [
 Neil Kothari - [LinkedIn](https://www.linkedin.com/in/neilkothari1/) - [email](mailto:nak5c@virginia.edu)<br />
 
 Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n-u-b-i-s/SurgeSaver)
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
