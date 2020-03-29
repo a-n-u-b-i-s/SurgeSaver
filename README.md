@@ -84,7 +84,7 @@ brew install sass/sass/sass
 ![Analytics Screen Shot][analytics-screenshot]
 <img src="images/TextAlert.jpg" width="400" height="auto">
 
-SurgeSaver tracks live and predictive Locational Marginal Pricing (LMP) across over 20 energy/power utilities in the Midwest and Mid Atlantic in the PJM transmission zone. We send text-alerts to users when price gouging is likely to occur within the next 24 hours, giving them the necessary information to make informed decisions regarding their power usage. In addition, the application compiles and displays informative visualizations of demand trends.
+SurgeSaver tracks live and predictive Locational Marginal Pricing (LMP) across over 20 energy/power utilities in the Midwest and Mid Atlantic. We send text-alerts to users when price gouging is likely to occur within the next 24 hours, giving them the necessary information to make informed decisions regarding their power usage. In addition, the application compiles and displays informative visualizations of demand trends.
 
 <!-- ROADMAP -->
 
