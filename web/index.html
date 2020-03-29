@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Surge Saver | Description</title>
+		<meta charset="utf-8" />
+
+		<title>SurgeSaver</title>
+		<meta name="description" content="" />
+		<meta
+			name="author"
+			content="Anubis Watal, Neil Kothari, Tessa Danehy & Lukas Houpt"
+		/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+			integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		/>
+		<link href="index.css" rel="stylesheet" />
+
+		<link rel="icon" type="image/png" href="icon.png" />
+
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 	</head>
+
 	<body>
-		<h1>Welcome to SurgeSaver. Our HooHacks Project.</h1>
+		<div id="surge">
+			<div class="navigationContainer">
+				<div class="logoContainer">
+					<img class="logo" src="logo.png" />
+				</div>
+				<hr class="underLogo" />
+				<div class="navigation">
+					<div class="navHeader">
+						<p>USER</p>
+					</div>
+					<div
+						class="navigationItem"
+						:class='{ selected: currentPage==="Home" }'
+						@click='changePage("Home")'
+					>
+						<div class="navSec">
+							<p><i class="fa fa-home"></i> Home</p>
+						</div>
+						<div v-if='currentPage==="Home"' class="navigationHighlight"></div>
+					</div>
+					<div
+						class="navigationItem"
+						:class='{ selected: currentPage==="Analytics" }'
+						@click='changePage("Analytics")'
+					>
+						<div class="navSec">
+							<p><i class="fa fa-chart-line"></i> Analytics</p>
+						</div>
+						<div
+							v-if='currentPage==="Analytics"'
+							class="navigationHighlight"
+						></div>
+					</div>
+					<div class="navHeader">
+						<p>GENERAL</p>
+					</div>
+					<div
+						class="navigationItem"
+						:class='{ selected: currentPage==="About" }'
+						@click='changePage("About")'
+					>
+						<div class="navSec">
+							<p><i class="fa fa-atom"></i> About</p>
+						</div>
+						<div v-if='currentPage==="About"' class="navigationHighlight"></div>
+					</div>
+					<div
+						class="navigationItem"
+						:class='{ selected: currentPage==="FAQ" }'
+						@click='changePage("FAQ")'
+					>
+						<div class="navSec">
+							<p><i class="fa fa-life-ring"></i> FAQ</p>
+						</div>
+						<div v-if='currentPage==="FAQ"' class="navigationHighlight"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="surgeInfoContainer">
+				<div class="surgePageContent" id="Home" v-if='currentPage==="Home"'>
+					<h1>Save Money. Save the Planet</h1>
+					<div class="infoContainer">
+						<div class="section">
+							<div class="floater l">
+								<h3 class="sectionHeader">How does it work?</h3>
+								<div class="regIconContainer">
+									<i class="bigIcon fa fa-bolt"></i>
+								</div>
+								<p>
+									SurgeSaver will notify you during peak hours, notifying you to
+									recude your consumption.
+								</p>
+							</div>
+						</div>
+						<div class="section">
+							<div class="floater m">
+								<h3 class="sectionHeader">How does it help?</h3>
+								<div class="regIconContainer">
+									<i class="bigIcon fa fa-globe-americas"></i>
+								</div>
+								<p></p>
+							</div>
+						</div>
+						<div class="section">
+							<div class="floater r">
+								<h3 class="sectionHeader">How do I get started?</h3>
+								<div class="regIconContainer">
+									<i class="bigIcon fa fa-map-signs"></i>
+								</div>
+								<p>Enter your Zipcode to see how much you can be saving.</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<p>Zipcode: <input /></p>
+						<h4>
+							Where should we send Peak Hour Notifications?
+						</h4>
+						<p>Text / SMS: <input /></p>
+					</div>
+				</div>
+				<div
+					class="surgePageContent"
+					id="Analytics"
+					v-if='currentPage==="Analytics"'
+				>
+					<h1>Analytics</h1>
+				</div>
+				<div class="surgePageContent" id="About" v-if='currentPage==="About"'>
+					<h1>About</h1>
+				</div>
+				<div class="surgePageContent" id="FAQ" v-if='currentPage==="FAQ"'>
+					<h1>FAQ</h1>
+				</div>
+				<div class="footer">
+					<div>
+						<p class="listed">Mail: <span>support@surgesaver.com</span></p>
+						<p class="listed">Twitter: <span>@surgesaver</span></p>
+						<p class="listed">Instagram: <span>@surgesaver</span></p>
+					</div>
+					<div>
+						<p>&copy; <span>2020 SurgeSaver</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
+	<script src="index.js"></script>
 </html>
