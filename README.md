@@ -49,7 +49,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Demand for electricity varies greatly throughout the day, and companies have responded by charging more for power during certain hours to disincentivize use. “Peaker plants” are inefficient power plants only used in these hours of peak consumption, and are the source of some of the country’s worst pollution. Most people aren’t aware of the hours when they should reduce consumption, and end up paying up to 5x as much per kWh for things like running their AC mid-day. With our application, users will be notified when surge pricing is likely to occur, and will be able to reduce energy use to both save money and help the environment by avoiding "peaker plants".
+Demand for electricity varies greatly throughout the day, and companies have responded by charging more for power during certain hours to disincentivize use. “Peaker plants” are inefficient power plants only used in these hours of peak consumption, and are the source of some of the country’s worst pollution. Most people aren’t aware of the hours when they should reduce consumption, and end up paying up to 10x as much per kWh for things like running their AC mid-day. With our application, users will be notified when surge pricing is likely to occur, and will be able to reduce energy use to both save money and help the environment by avoiding "peaker plants".
 
 ### Built With
 
