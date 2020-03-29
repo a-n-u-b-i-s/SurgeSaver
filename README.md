@@ -53,9 +53,11 @@ Demand for electricity varies greatly throughout the day, and companies have res
 
 ### Built With
 
-- []()
-- []()
-- []()
+- [Twilio API](https://www.twilio.com/docs/usage/api)
+- [VueJs](https://vuejs.org/)
+- [Saas](https://sass-lang.com/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [AWS S3](https://aws.amazon.com/s3/)
 
 <!-- GETTING STARTED -->
 
@@ -123,10 +125,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Anubis Watal - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
-Tessa Danehy - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:tld9kg@virginia.edu)<br />
-Lukas Houpt - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
-Neil Kothari - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
+Anubis Watal - [LinkedIn](https://twitter.com/twitter_handle) - [email](mailto:aw3852@nyu.edu)<br />
+Tessa Danehy - [LinkedIn](https://www.linkedin.com/in/tessa-danehy-314894153/) - [email](mailto:tld9kg@virginia.edu)<br />
+Lukas Houpt - [LinkedIn](https://www.linkedin.com/in/lukas-houpt-a185b1174/) - [email](mailto:lh2xs@virginia.edu)<br />
+Neil Kothari - [LinkedIn](https://www.linkedin.com/in/neilkothari1/) - [email](mailto:nak5c@virginia.edu)<br />
 
 Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n-u-b-i-s/SurgeSaver)
 
@@ -134,8 +136,6 @@ Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n
 
 ## Acknowledgements
 
-- []()
-- []()
 - []()
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -151,4 +151,4 @@ Project Link: [https://github.com/a-n-u-b-i-s/SurgeSaver](https://github.com/a-n
 [issues-url]: https://github.com/a-n-u-b-i-s/SurgeSaver/issues
 [license-shield]: https://img.shields.io/github/license/a-n-u-b-i-s/SurgeSaver.svg?style=flat-square
 [license-url]: https://github.com/a-n-u-b-i-s/SurgeSaver/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/analytics.png
