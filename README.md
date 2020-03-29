@@ -47,6 +47,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
+Demand for electricity varies greatly throughout the day, and companies have responded by charging more for power during certain hours to disincentivize use. “Peaker plants” are inefficient power plants only used in these hours of peak consumption, and are the source of some of the country’s worst pollution. Most people aren’t aware of the hours when they should reduce consumption, and end up paying up to 5x as much per kWh for things like running their AC mid-day. With our application, users will be notified when surge pricing is likely to occur, and will be able to reduce energy use to both save money and save the environment. 
+
 ### Built With
 
 - []()
@@ -120,7 +122,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Anubis Watal - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
-Tess Danehy - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
+Tessa Danehy - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:tld9kg@virginia.edu)<br />
 Lukas Houpt - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
 Neil Kothari - [@twitter_handle](https://twitter.com/twitter_handle) - [email](mailto:)<br />
 
