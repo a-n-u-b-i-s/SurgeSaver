@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/a-n-u-b-i-s/SurgeSaver">
-    <img src="images/logo.png" alt="Logo" width="180" height="180">
+    <img src="images/SurgeSaver (2)-1.png" width="500" height="150">	
   </a>
 
   <h3 align="center">SurgeSaver</h3>
