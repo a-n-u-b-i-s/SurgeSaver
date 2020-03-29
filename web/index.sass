@@ -263,6 +263,14 @@ $xl: 1280px
 
 .surgeInputs
     margin-top: 32px
+    overflow-y: scroll
+    @media screen and (max-height: 600px)
+        height: 15vh
+    @media screen and (max-height: 880px)
+        height: 28vh
+    @media screen and (max-width: $md)
+        overflow-y: none
+        height: auto
 
 .inputTitle
     margin: 5px 0px
@@ -430,7 +438,7 @@ input
     text-decoration: none
     border: none
     margin: 10px 0px
-    padding: 10px 20px
+    padding: 8px 10px
     appearance: none
     background: $white
     cursor: pointer

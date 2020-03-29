@@ -102,7 +102,7 @@ function cg() {
 		},
 		title: {
 			display: true,
-			text: V.month
+			text: V.month + " 2019"
 		},
 		legend: {
 			display: false
