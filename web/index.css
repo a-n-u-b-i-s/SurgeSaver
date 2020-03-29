@@ -238,6 +238,9 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  .footer .foot .listed:last-of-type {
+    display: none;
+  }
 }
 
 .surgeInputs {
